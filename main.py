@@ -126,7 +126,13 @@ async def on_message(message):
         response = "ÅOÅOCheeeeeeeyyy"
         await message.channel.send(response)
         await message.channel.send(file = random.choice(babis))
-    
+
+
+    if "alex" in message.content.lower():
+        response = "Sorry bror, @Åleg är inte här, han är lite sen."
+        await message.channel.send(response)
+
+        
 
 # await connect(*, timeout=60.0, reconnect=True, cls=<class 'discord.voice_client.VoiceClient'>  )
 
