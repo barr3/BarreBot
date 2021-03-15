@@ -99,7 +99,8 @@ async def on_message(message):
             print(response)
             
             if response == discord.File("/home/barre/BarreBot/barre2.jpg", filename =None, spoiler=False):
-                await message.channel.send(file = response, "Titta vilken stilig pojke, tjejerna flockas.")
+                # await message.channel.send(file = response)
+                await message.channel.send("Titta vilken stilig pojke, tjejerna flockas.")
             else: 
                 await message.channel.send(file = response)               
 
