@@ -49,7 +49,8 @@ async def on_message(message):
     moise = [
         'Moise är svart ngl ngl',
         'moise moise moise moise moise moise moise miose mmiose miose moise moise moise mosie moise moise',
-        'mowshe',  
+        'mowshe',
+        discord.File("/home/barre/BarreBot/moise1.jpg", filename =None, spoiler=False),
     ]
 
     michael = [
@@ -75,8 +76,13 @@ async def on_message(message):
     
     if "moise" in message.content.lower():
         #voice.connect(True, 1000)
+        
         response = random.choice(moise)
-        await message.channel.send(response)
+
+        if response.type != str:
+            await message.channel.send(file = response)
+        else:
+            await message.channel.send(response)
 
     if "michael" in message.content.lower():
         response = random.choice(michael)
