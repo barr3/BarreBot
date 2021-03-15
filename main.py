@@ -13,7 +13,7 @@ client = discord.Client()
 #voice = discord.VoiceClient(client, "General")
 
 # viktor = discord.File("/home/barre/Development/Programmering/DiscordBot/viktor.mov", filename =None,spoiler=False)
-viktor = discord.File("/home/barre/BarreBot/viktor.mov", filename =None,spoiler=False)
+
 
 
 joydip_nr = 1
@@ -64,6 +64,8 @@ async def on_message(message):
         'Tjejer akta er för Barre, han är för söt ngl fr fr',
         'Även fast Barre är lite moisig i skallen är han fortfarande cool ngl',
         'Fr fr visste du att Barre heter Barre Nils Fredrik Svante Åke Blomber',
+        discord.File("/home/barre/BarreBot/barre1.jpg", filename =None, spoiler=False),
+        discord.File("/home/barre/BarreBot/barre2.jpg", filename =None, spoiler=False),
         ]
     
     babis = [
@@ -90,8 +92,15 @@ async def on_message(message):
 
     if "barre" in message.content.lower():
         response = random.choice(barre)
-        await message.channel.send(response)                
-        
+
+        if isinstance(response, str):
+            await message.channel.send(response)
+        else:
+            await message.channel.send(file = response)
+            if response == discord.File("/home/barre/BarreBot/barre2.jpg", filename =None, spoiler=False):
+                await message.channel.send("Titta vilken stilig pojke, tjejerna flockas.")
+
+                
     if "joydip" in message.content.lower():
 
         global joydip_nr
@@ -104,6 +113,7 @@ async def on_message(message):
     if "viktor" in message.content.lower():
         # response = "viiiiikkkkktooooooooooor *fladdrar med bratten*"
         response = "viktoooooooooooooorrrrrrrrrrr"
+        viktor = discord.File("/home/barre/BarreBot/viktor.mov", filename =None,spoiler=True)
         
         await message.channel.send(response)
         await message.channel.send(file = viktor)
