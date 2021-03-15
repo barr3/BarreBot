@@ -99,7 +99,7 @@ async def on_message(message):
             print(response.fp.name)
             
             if response.fp.name == "/home/barre/BarreBot/barre2.jpg":
-                # await message.channel.send(file = response)
+                await message.channel.send(file = response)
                 await message.channel.send("Titta vilken stilig pojke, tjejerna flockas.")
             else: 
                 await message.channel.send(file = response)               
