@@ -86,6 +86,11 @@ async def on_message(message):
         "Alex födelseplats: https://en.wikipedia.org/wiki/Benis"
     ]
     
+    benis = [
+        discord.File("/home/barre/BarreBot/benis1.png"),
+        discord.File("/home/barre/BarreBot/benis2.jpg"),
+    ]
+
     
     if "moise" in message.content.lower():
         #voice.connect(True, 1000)
@@ -147,7 +152,10 @@ async def on_message(message):
         response = random.choice(tjejer)
         await message.channel.send(response)
 
-    
+    if "benis" in message.content.lower():
+        response = random.choice(benis)
+        await message.channel.send(response)
+        
 
 # await connect(*, timeout=60.0, reconnect=True, cls=<class 'discord.voice_client.VoiceClient'>  )
 
