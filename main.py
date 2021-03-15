@@ -96,7 +96,7 @@ async def on_message(message):
         if isinstance(response, str):
             await message.channel.send(response)
         else:
-            print(response)
+            print(response.fp)
             
             if response == discord.File("/home/barre/BarreBot/barre2.jpg", filename =None, spoiler=False):
                 # await message.channel.send(file = response)
