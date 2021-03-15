@@ -129,7 +129,7 @@ async def on_message(message):
 
 
     if "alex" in message.content.lower():
-        response = "Sorry bror, @Åleg är inte här, han är lite sen."
+        response = "Sorry bror, @aleg är inte här, han är lite sen."
         await message.channel.send(response)
 
         
