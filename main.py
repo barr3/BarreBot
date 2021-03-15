@@ -74,6 +74,12 @@ async def on_message(message):
         discord.File("/home/barre/BarreBot/babis3.png", filename =None,spoiler=False),
     ]
 
+    tjejer = [
+        'Error 0x4890f3g, teknikare får inte prata om, eller prata med tjejer.',
+        'Imagine being a teknikare lmao',
+        'Det var typ länge sedan man såg en tjej ngl',
+    ]
+    
 
     
     if "moise" in message.content.lower():
@@ -132,6 +138,10 @@ async def on_message(message):
         response = "Sorry bror, <@221266059506876416> är inte här, han är lite sen."
         await message.channel.send(response)
 
+    if "tjejer" in message.content.lower():
+        response = random.choice(tjejer)
+        await message.channel.send(response)
+        
         
 
 # await connect(*, timeout=60.0, reconnect=True, cls=<class 'discord.voice_client.VoiceClient'>  )
