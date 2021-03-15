@@ -79,10 +79,10 @@ async def on_message(message):
         
         response = random.choice(moise)
 
-        if !isinstance(response, str):
-            await message.channel.send(file = response)
-        else:
+        if isinstance(response, str):
             await message.channel.send(response)
+        else:
+            await message.channel.send(file = response)
 
     if "michael" in message.content.lower():
         response = random.choice(michael)
