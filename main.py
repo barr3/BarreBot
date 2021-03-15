@@ -96,9 +96,15 @@ async def on_message(message):
         if isinstance(response, str):
             await message.channel.send(response)
         else:
-            await message.channel.send(file = response)
             if response == discord.File("/home/barre/BarreBot/barre2.jpg", filename =None, spoiler=False):
                 await message.channel.send("Titta vilken stilig pojke, tjejerna flockas.")
+                await message.channel.send(file = response)
+            else: 
+                await message.channel.send(file = response)               
+
+                
+
+
 
                 
     if "joydip" in message.content.lower():
