@@ -78,6 +78,7 @@ async def on_message(message):
         'Error 0x4890f3g, teknikare får inte prata om, eller prata med tjejer.',
         'Imagine being a teknikare lmao',
         'Det var typ länge sedan man såg en tjej ngl',
+        'https://sv.wikipedia.org/wiki/Poop',
     ]
 
     alex = [
