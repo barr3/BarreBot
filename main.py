@@ -98,7 +98,7 @@ async def on_message(message):
         else:
             print(response.fp)
             
-            if response == discord.File("/home/barre/BarreBot/barre2.jpg", filename =None, spoiler=False):
+            if response.fp.name == discord.File("/home/barre/BarreBot/barre2.jpg", filename =None, spoiler=False):
                 # await message.channel.send(file = response)
                 await message.channel.send("Titta vilken stilig pojke, tjejerna flockas.")
             else: 
