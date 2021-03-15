@@ -79,7 +79,7 @@ async def on_message(message):
         
         response = random.choice(moise)
 
-        if isinstance(response, str):
+        if !isinstance(response, str):
             await message.channel.send(file = response)
         else:
             await message.channel.send(response)
