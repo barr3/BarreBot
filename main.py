@@ -12,6 +12,8 @@ GUILD = os.getenv('DISCORD_GUILD')
 client = discord.Client()
 #voice = discord.VoiceClient(client, "General")
 
+# viktor = discord.File("/home/barre/Development/Programmering/DiscordBot/viktor.mov", filename =None,spoiler=False)
+viktor = discord.File("/home/barre/BarreBot/viktor.mov", filename =None,spoiler=False)
 
 
 joydip_nr = 1
@@ -86,7 +88,12 @@ async def on_message(message):
         
         await message.channel.send(response)                
 
+    if "viktor" in message.content.lower():
+        # response = "viiiiikkkkktooooooooooor *fladdrar med bratten*"
+        response = "viktoooooooooooooorrrrrrrrrrr"
         
+        await message.channel.send(response)
+        await message.channel.send(file = viktor)
     
 
 # await connect(*, timeout=60.0, reconnect=True, cls=<class 'discord.voice_client.VoiceClient'>  )
