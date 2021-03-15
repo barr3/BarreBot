@@ -87,8 +87,8 @@ async def on_message(message):
     ]
     
     benis = [
-        discord.File("/home/barre/BarreBot/benis1.png"),
-        discord.File("/home/barre/BarreBot/benis2.jpg"),
+        discord.File("/home/barre/BarreBot/benis1.png", filename =None, spoiler=False),
+        discord.File("/home/barre/BarreBot/benis2.jpg", filename =None, spoiler=False),
     ]
 
     
@@ -154,7 +154,7 @@ async def on_message(message):
 
     if "benis" in message.content.lower():
         response = random.choice(benis)
-        await message.channel.send(response)
+        await message.channel.send(file = response)
         
 
 # await connect(*, timeout=60.0, reconnect=True, cls=<class 'discord.voice_client.VoiceClient'>  )
