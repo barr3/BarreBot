@@ -139,7 +139,7 @@ async def on_message(message):
 
 
     if "alex" in message.content.lower():
-        response = "Sorry bror, <@221266059506876416> är inte här, han är lite sen."
+        response = random.choice(alex)
         await message.channel.send(response)
 
     if "tjejer" in message.content.lower():
