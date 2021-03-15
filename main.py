@@ -79,8 +79,12 @@ async def on_message(message):
         'Imagine being a teknikare lmao',
         'Det var typ länge sedan man såg en tjej ngl',
     ]
-    
 
+    alex = [
+        "Sorry bror, <@221266059506876416> är inte här, han är lite sen.",
+        "Alex födelseplats: https://en.wikipedia.org/wiki/Benis"
+    ]
+    
     
     if "moise" in message.content.lower():
         #voice.connect(True, 1000)
@@ -141,8 +145,8 @@ async def on_message(message):
     if "tjejer" in message.content.lower():
         response = random.choice(tjejer)
         await message.channel.send(response)
-        
-        
+
+    
 
 # await connect(*, timeout=60.0, reconnect=True, cls=<class 'discord.voice_client.VoiceClient'>  )
 
