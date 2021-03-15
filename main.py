@@ -65,7 +65,14 @@ async def on_message(message):
         'Fr fr visste du att Barre heter Barre Nils Fredrik Svante Åke Blomber',
         ]
     
+    babis = [
+        discord.File("/home/barre/BarreBot/babis1.png", filename =None,spoiler=False),
+        discord.File("/home/barre/BarreBot/babis2.png", filename =None,spoiler=False),
+        discord.File("/home/barre/BarreBot/babis3.png", filename =None,spoiler=False),
+    ]
 
+
+    
     if "moise" in message.content.lower():
         #voice.connect(True, 1000)
         response = random.choice(moise)
@@ -94,6 +101,11 @@ async def on_message(message):
         
         await message.channel.send(response)
         await message.channel.send(file = viktor)
+
+    if "babis" in message.content.lower():
+        response = "ÅOÅOCheeeeeeeyyy"
+        await message.channel.send(response)
+        await message.channel.send(file = random.choice(babis))
     
 
 # await connect(*, timeout=60.0, reconnect=True, cls=<class 'discord.voice_client.VoiceClient'>  )
