@@ -57,7 +57,7 @@ async def on_message(message):
     
     if this_channel == music_channel:
         # print("yo yo korv tilll frulle")
-        print(message)
+        print(message.content[0])
         
         if "-" in message.content.lower():
             print("this shit a bot command ngl")
