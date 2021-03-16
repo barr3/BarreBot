@@ -19,7 +19,7 @@ client = discord.Client()
 joydip_nr = 1
 
 
-music_channel = client.get_channel("789435195727020034")
+# music_channel = client.get_channel("789435195727020034")
 
 
 def int_to_roman(input):
@@ -49,7 +49,13 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.channel.name == music_channel:
+
+    this_channel = message.channel.id
+    music_channel = 789435195727020034
+    
+    
+    
+    if this_channel == music_channel:
         print("yo yo korv tilll frulle")
     
     
