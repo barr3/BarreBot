@@ -92,6 +92,12 @@ async def on_message(message):
         discord.File("/home/barre/BarreBot/benis2.jpg", filename =None, spoiler=False),
     ]
 
+    fysik = [
+        discord.File("/home/barre/BarreBot/fysik1.jpg", filename =None, spoiler=False),
+        discord.File("/home/barre/BarreBot/fysik2.jpg", filename =None, spoiler=False),
+        discord.File("/home/barre/BarreBot/fysik3.jpg", filename =None, spoiler=False),
+    ]
+    
     
     if "moise" in message.content.lower():
         #voice.connect(True, 1000)
@@ -165,7 +171,11 @@ async def on_message(message):
     if "benis" in message.content.lower():
         response = random.choice(benis)
         await message.channel.send(file = response)
-        
+
+    if "fysik" in message.content.lower():
+        response = random.choice(fysik)
+        await message.channel.send("Fysik be like: ")
+        await message.channel.send(file = response)        
 
 # await connect(*, timeout=60.0, reconnect=True, cls=<class 'discord.voice_client.VoiceClient'>  )
 
