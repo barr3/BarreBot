@@ -68,7 +68,7 @@ async def on_message(message):
             embed.set_thumbnail(url="https://pbs.twimg.com/profile_images/1309468619764641796/iO0ONZtX_400x400.jpg")
             embed.add_field(name="", value="", inline=False)
             embed.set_footer(text="Kolla gärna in den här kanalen istället ngl <#789435195727020034>")
-            await ctx.send(embed=embed)
+            await message.channel.send(embed=embed)
             
 
         
