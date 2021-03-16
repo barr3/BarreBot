@@ -46,7 +46,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author == client.user or message.autor.bot:
+    if message.author == client.user or message.author.bot:
         return
 
 
