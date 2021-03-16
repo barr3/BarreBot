@@ -46,9 +46,11 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author == client.user or message.bot == True:
+    if message.author == client.user:
         return
 
+
+    print(message.author)
 
     this_channel = message.channel.id
     music_channel = 789435195727020034
