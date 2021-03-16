@@ -79,6 +79,7 @@ async def on_message(message):
         'Imagine being a teknikare lmao',
         'Det var typ länge sedan man såg en tjej ngl',
         'https://sv.wikipedia.org/wiki/Poop',
+        discord.File("/home/barre/BarreBot/kvinna1.jpg", filename =None, spoiler=False)
     ]
 
     alex = [
@@ -150,7 +151,16 @@ async def on_message(message):
 
     if "tjejer" in message.content.lower():
         response = random.choice(tjejer)
-        await message.channel.send(response)
+
+        if isinstance(response, str):
+            await message.channel.send(response)
+        else:
+            if response.fp.name == "/home/barre/BarreBot/kvinna1.jpg":
+                await message.channel.send("NTI be like")
+                await message.channel.send(file = response)
+            else:
+                await message.channel.send(file = response)
+
 
     if "benis" in message.content.lower():
         response = random.choice(benis)
